@@ -1,0 +1,16 @@
+<div class="app-container">
+  <app-header></app-header> <!-- Aquí se muestra el Header -->
+
+  <div class="content">
+    <!-- Componente Mascotas -->
+    <div *ngIf="mascota.id === null">
+      <app-mascotas></app-mascotas> <!-- Componente que muestra la lista de mascotas -->
+    </div>
+
+    <div *ngIf="mascota.id !== null">
+      <app-mascota-form></app-mascota-form> <!-- Formulario para crear o editar una mascota -->
+    </div>
+  </div>
+
+  <app-footer></app-footer> <!-- Aquí se muestra el Footer -->
+</div>
